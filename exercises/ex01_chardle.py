@@ -1,4 +1,4 @@
-"""EX01 - Chardle - A cute step towards Wordle"""
+"""EX01 - Chardle - A cute step towards Wordle!"""
 __author__ = "730565579"
 user_word: str = input("Enter a 5-character word: ")
 if len(user_word) != 5:
@@ -26,6 +26,9 @@ if user_letter == user_word[4]:
     print(user_letter + " found at index 4")
     num_letter = num_letter + 1
 if num_letter > 0:
-    print(str(num_letter) + " instances of " + user_letter + " found in " + user_word)
+    if num_letter == 1:
+       print(str(num_letter) + " instance of " + user_letter + " found in " + user_word)
+    else:
+       print(str(num_letter) + " instances of " + user_letter + " found in " + user_word)
 else:
     print("No instances of " + user_letter + " found in " + user_word)
