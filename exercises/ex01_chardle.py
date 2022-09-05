@@ -27,8 +27,8 @@ if user_letter == user_word[4]:
     num_letter = num_letter + 1
 if num_letter > 0:
     if num_letter == 1:
-       print(str(num_letter) + " instance of " + user_letter + " found in " + user_word)
+        print(str(num_letter) + " instance of " + user_letter + " found in " + user_word)
     else:
-       print(str(num_letter) + " instances of " + user_letter + " found in " + user_word)
+        print(str(num_letter) + " instances of " + user_letter + " found in " + user_word)
 else:
     print("No instances of " + user_letter + " found in " + user_word)
