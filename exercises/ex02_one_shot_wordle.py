@@ -1,9 +1,9 @@
 """EX02 - One Shot Wordle - Another step towards Wordle."""
-__author__ = "730565579"
-secret_word: str = "computer"
+__author__: str = "730565579"
+secret_word: str = "python"
 user_guess: str = input(f"What is your {len(secret_word)} letter guess? ")
 while len(user_guess) != len(secret_word):
-    user_guess: str = input(f"That was not {len(secret_word)} letters! Try again: ")
+    user_guess = input(f"That was not {len(secret_word)} letters! Try again: ")
 
 index_guess: int = 0 
 result_emoji: str = ""
@@ -17,12 +17,12 @@ while index_guess < len(secret_word):
     else:
         char_exists: bool = False
         secret_index: int = 0
-        while char_exists == False and secret_index < len(secret_word):
+        while char_exists is False and secret_index < len(secret_word):
             if user_guess[index_guess] == secret_word[secret_index]:
                 char_exists = True
             else:
                 secret_index += 1
-        if char_exists == True:
+        if char_exists is True:
             result_emoji += YELLOW_BOX
         else:
             result_emoji += WHITE_BOX
@@ -33,4 +33,3 @@ if user_guess == secret_word:
     print("Woo! You got it!")
 else:
     print("Not quite. Play again soon!")
-
